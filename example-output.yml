@@ -1,0 +1,48 @@
+[general]
+status_backend = sqlite
+autorefresh = 5
+maxconnections = 3
+accounts = ted_example_com, marvin_example_com
+
+[Account ted_example_com]
+localrepository = ted_example_com_to
+remoterepository = ted_example_com_from
+
+[Repository ted_example_com_from]
+remoteuser = ted@example.com
+remotepass = sekrit
+readonly = True
+cert_fingerprint = somehash
+type = Gmail
+
+[Repository ted_example_com_to]
+remoteuser = ted@example.org
+cert_fingerprint = somehash
+ssl = True
+remotehost = imap.gmail.com
+remotepass = sekrit2
+type = IMAP
+remoteport = 993
+
+
+[Account marvin_example_com]
+localrepository = marvin_example_com_to
+remoterepository = marvin_example_com_from
+
+[Repository marvin_example_com_from]
+remoteuser = marvin@example.com
+remotepass = passw0rd
+readonly = True
+cert_fingerprint = somehash
+type = Gmail
+
+[Repository marvin_example_com_to]
+remoteuser = marvster@example.org
+cert_fingerprint = somehash
+ssl = True
+remotehost = imap.gmail.com
+remotepass = pAssw0rd!
+type = IMAP
+remoteport = 993
+
+
